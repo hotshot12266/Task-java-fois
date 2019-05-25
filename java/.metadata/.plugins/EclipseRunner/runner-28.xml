@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<runner version="1.0.0">
+<category name="カテゴリーなし">
+<launchConfiguration bookmark="false" name="HelloWorldJDBCPostgreSQL"/>
+<launchConfiguration bookmark="false" name="HelloWorldJDBCPostgreSQL (1)"/>
+<launchConfiguration bookmark="false" name="TestProject"/>
+<launchConfiguration bookmark="false" name="_Test"/>
+<launchConfiguration bookmark="false" name="java01"/>
+<launchConfiguration bookmark="false" name="java02"/>
+<launchConfiguration bookmark="false" name="java02 (1)"/>
+<launchConfiguration bookmark="false" name="ローカル・ホスト の Tomcat6 (Java6)"/>
+</category>
+</runner>
