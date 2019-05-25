@@ -1,0 +1,13 @@
+package java2;
+
+import java.util.Scanner;
+
+public class java02 {
+	public static void main(String[] args) {
+		Scanner cb = new Scanner(System.in);
+		String s=cb.nextLine();
+		if(s.length()>0){
+			System.out.print("so ki tu trong chuoi la "+s.length());
+		}
+	}
+}
