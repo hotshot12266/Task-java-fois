@@ -36,15 +36,15 @@ public class java01 {
 		//		}
 
 		//2-2：出力する番号の結果3つずつ増加
-		//		System.out.print("整数を入力してください。 ");
-		//		int n = inp.nextInt();
-		//		int dem=0;
-		//		System.out.printf("結果:");
-		//		while(dem<5){
-		//			System.out.printf("%d",n);
-		//			n+=3;
-		//			dem++;
-		//		}
+				System.out.print("整数を入力してください。 ");
+				int n = inp.nextInt();
+				int dem=0;
+				System.out.printf("結果:");
+				while(dem<5){
+					System.out.printf("%d",n);
+					n+=3;
+					dem++;
+				}
 
 
 		//2-3：条件をチェックする

@@ -37,18 +37,18 @@ public class java02 {
 
 
 		//1-4:
-		//		String c1="東京都杉並区";
-		//		System.out.print("①"+c1);
-		//		System.out.print("\n位置の文字取りたい：");
-		//		int vt1=cb.nextInt();
-		//		int kq1 = c1.charAt(vt1-1);
-		//		System.out.println("①の文字列の"+vt1+"文字目を取りたいのは("+(char) kq1+")です。");
-		//		System.out.print("\n位置の文字から取りたい：");
-		//		int vt2=cb.nextInt();
-		//		System.out.print("\n位置の文字まで取りたい：");
-		//		int vt3=cb.nextInt();
-		//		String kq2 = c1.substring(vt2-1, vt3);
-		//		System.out.println("①の文字列の"+vt2+"文字目から"+vt3+"文字目を取りたいのは("+kq2+")です。");
+		//				String c1="東京都杉並区";
+		//				System.out.print("①"+c1);
+		//				System.out.print("\n位置の文字取りたい：");
+		//				int vt1=cb.nextInt();
+		//				int kq1 = c1.charAt(vt1-1);
+		//				System.out.println("①の文字列の"+vt1+"文字目を取りたいのは("+(char) kq1+")です。");
+		//				System.out.print("\n位置の文字から取りたい：");
+		//				int vt2=cb.nextInt();
+		//				System.out.print("\n位置の文字まで取りたい：");
+		//				int vt3=cb.nextInt();
+		//				String kq2 = c1.substring(vt2-1, vt3);
+		//				System.out.println("①の文字列の"+vt2+"文字目から"+vt3+"文字目を取りたいのは("+kq2+")です。");
 
 
 		//1-5:
@@ -60,6 +60,39 @@ public class java02 {
 		//		int kq1 = c1.indexOf(vt1,star);
 		//		star=kq1+1;
 		//		System.out.println("("+vt1+")が最初に出現するのは " + star+"文字目です。");
+
+		//1-6:
+		//		int star=0,star2=0;
+		//		int dem=0;
+		//		String c1="東京都杉並区";
+		//		System.out.print("①"+c1);
+		//		System.out.print("\n文字取りたい：");
+		//		String vt1=cb.nextLine();
+		//		int kq1 = c1.indexOf(vt1,star);
+		//		star=kq1+1;
+		//		if(vt1.length()==2){
+		//			star++;
+		//		}else{
+		//			if(vt1.length()==3){
+		//				star+=2;
+		//			}else{
+		//				if(vt1.length()==4){
+		//					star+=3;
+		//				}else{
+		//					if(vt1.length()==5){
+		//						star+=4;
+		//					}
+		//					}
+		//			}
+		//		}
+		//		for(int i=c1.length();i>star;i--){
+		//			if(i==6){
+		//				int s2=i;
+		//				String kq2=c1.substring(star,s2);
+		//				System.out.print("("+vt1+")より、後の文字列は("+kq2+")です。");
+		//			}
+		//		}
+
 
 	}
 }
