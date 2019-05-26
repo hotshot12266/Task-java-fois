@@ -20,7 +20,7 @@ public class java02 {
 		//						String k=cb.nextLine();
 		//						System.out.println("結果:"+ s.equals(k));
 
-		//1-3:
+		//1-3:比べる結果は番号が出る。
 		//		Integer s1=123;
 		//		System.out.print("s1="+s1);
 		//		Integer s2=456;
@@ -36,7 +36,7 @@ public class java02 {
 		//		System.out.println("\n①と⑤の大小比較結果 :"+s1.compareTo(s5));
 
 
-		//1-4:
+		//1-4:位置の番号に入力すると、文字が出る。
 		//				String c1="東京都杉並区";
 		//				System.out.print("①"+c1);
 		//				System.out.print("\n位置の文字取りたい：");
@@ -51,7 +51,7 @@ public class java02 {
 		//				System.out.println("①の文字列の"+vt2+"文字目から"+vt3+"文字目を取りたいのは("+kq2+")です。");
 
 
-		//1-5:
+		//1-5:文字に入力すると、位置の番号が出る。
 		//		int star=0;
 		//		String c1="東京都杉並区";
 		//		System.out.print("①"+c1);
@@ -61,7 +61,7 @@ public class java02 {
 		//		star=kq1+1;
 		//		System.out.println("("+vt1+")が最初に出現するのは " + star+"文字目です。");
 
-		//1-6:
+		//1-6:文字に入力すると、文字の後ろが出る。
 		//		int star=0,star2=0;
 		//		int dem=0;
 		//		String c1="東京都杉並区";
@@ -94,5 +94,66 @@ public class java02 {
 		//		}
 
 
+		//1-7:INTからSTRINGまで変えて、STRINGからINTまで変えます。
+		//		String a="256";
+		//		String b="128";
+		//		int c=256;
+		//		int d=128;
+		//		int s1=Integer.parseInt(a);
+		//		int s2=Integer.parseInt(b);
+		//		String c3=String.format("%d", c);
+		//		String c4=String.format("%d", d);
+		//		System.out.print("\n①："+s1);
+		//		System.out.print("\n②："+s2);
+		//		System.out.print("\n③："+c3);
+		//		System.out.print("\n④："+c4);
+		//		int s3=s1+s2;
+		//		System.out.print("\n\n①と②の和は"+s3+"です。");
+		//		System.out.print("\n③の変換結果は"+c3+"です。");
+		//		System.out.print("\n④の変換結果は"+c4+"です。");
+
+		//1-8:STRINGで①の最後尾に②を追加、③の都と早の間に④を挿入、⑤から’千代田区’を削除。
+		//						String c1,c2,c3,c4,c5,ch2;
+		//						c1 = "東京都杉並区";
+		//						c2 = "荻窪";
+		//						c3 = "東京都早宮";
+		//						c4 = "練馬区";
+		//						c5 = "東京都千代田区東神田";
+		//						StringBuffer sb=new StringBuffer(c3);
+		//						System.out.print("\n①："+c1);
+		//						System.out.print("\n②："+c2);
+		//						System.out.print("\n③："+c3);
+		//						System.out.print("\n④："+c4);
+		//						System.out.print("\n⑤："+c5);
+		//						String ch=c5.replace("千代田区","");
+		//						ch2=c1.replace("都","都練馬区");
+		//						System.out.printf("\n\n①と②を追加した結果は("+c1+c2+")です.");
+		//						System.out.printf("\n③に④を挿入した結果は("+ch2+")です。");
+		//				        System.out.println("\n⑤から'千代田区'を削除した結果は("+ch+")です。");
+
+		//1-9:SStringBuilderやStringBufferで①の最後尾に②を追加、③の都と早の間に④を挿入、⑤から’千代田区’を削除。
+		//		String c1,c2,c3,c4,c5;
+		//		c1 = "東京都杉並区";
+		//		c2 = "荻窪";
+		//		c3 = "東京都早宮";
+		//		c4 = "練馬区";
+		//		c5 = "東京都千代田区東神田";
+		//		StringBuffer sb=new StringBuffer(c3);
+		//		System.out.print("\n①："+c1);
+		//		System.out.print("\n②："+c2);
+		//		System.out.print("\n③："+c3);
+		//		System.out.print("\n④："+c4);
+		//		System.out.print("\n⑤："+c5);
+		//		StringBuffer ch=sb.insert(3,c4);
+		//
+		//		StringBuilder sb2 = new StringBuilder(c1);
+		//		StringBuilder ch3=sb2.append(c2);
+		//		System.out.println(sb2);//in Hello Java
+		//		System.out.printf("\n\n①と②を追加した結果は("+ch3+")です.");
+		//		System.out.printf("\n③に④を挿入した結果は("+ch+")です。");
+		//
+		//		StringBuilder sb1 = new StringBuilder(c5);
+		//		StringBuilder ch1=sb1.delete(3, 7);
+		//		System.out.println("\n⑤から'千代田区'を削除した結果は("+ch1+")です。");
 	}
 }
