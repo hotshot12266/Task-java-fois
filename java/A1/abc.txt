@@ -1,5 +1,9 @@
-1．NullPointerException:is a RuntimeException. In Java, a special null value can be assigned to an object reference. NullPointerException is thrown when program attempts to use an object reference that has the null value.
-2．FileNotFoundException
-3．ArrayIndexOutOfBoundsException
-4．StringIndexOutOfBoundsException
-5．NumberFormatException
+1．NullPointerExceptionはプログラムがnull値を持つオブジェクト参照を使用しようとしたときにスローされます。
+
+2．FileNotFoundExceptionは指定されたパス名で示されたファイルを開く試みが失敗したことを示すシグナルです。
+
+3．ArrayIndexOutOfBoundsExceptionは存在しない配列インデックスにアクセスしようとしています。
+
+4．StringIndexOutOfBoundsExceptionはStringクラスのメソッドによってスローされます。これは、配列、文​​字列、またはベクトルへのインデックスが範囲外であることを示すために使用されます。
+
+5．NumberFormatExceptionはparseXXX（）メソッド（parseInt、parseFloatなど）が文字列を数値にフォーマット（変換）できない場合に、チェックされない例外がスローされます。

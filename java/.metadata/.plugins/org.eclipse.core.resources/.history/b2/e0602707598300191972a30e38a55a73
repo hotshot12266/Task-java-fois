@@ -1,0 +1,90 @@
+package java3;
+
+public class java03 {
+	public static void main(String[] args)throws Exception {
+		//1-1
+		//				try {
+		//					File file=new File("abc.txt");
+		//					if(!file.exists()){
+		//						file.createNewFile();
+		//					}
+		//					PrintWriter pw=new PrintWriter(file);
+		//					pw.println("1．NullPointerExceptionはプログラムがnull値を持つオブジェクト参照を使用しようとしたときにスローされます。\n");
+		//					pw.println("2．FileNotFoundExceptionは指定されたパス名で示されたファイルを開く試みが失敗したことを示すシグナルです。\n");
+		//					pw.println("3．ArrayIndexOutOfBoundsExceptionは存在しない配列インデックスにアクセスしようとしています。\n");
+		//					pw.println("4．StringIndexOutOfBoundsExceptionはStringクラスのメソッドによってスローされます。これは、配列、文​​字列、またはベクトルへのインデックスが範囲外であることを示すために使用されます。\n");
+		//					pw.println("5．NumberFormatExceptionはparseXXX（）メソッド（parseInt、parseFloatなど）が文字列を数値にフォーマット（変換）できない場合に、チェックされない例外がスローされます。");
+		//					pw.close();
+		//					System.out.println("done");
+		//				} catch (IOException e) {
+		//					e.printStackTrace();
+		//				}
+
+
+		//2-1:
+		//	try {
+		//		Object object = null;
+		//		object.hashCode();
+		//	} catch (NullPointerException e) {
+		//		System.out.println("スタックトレースも出力する");
+		//		e.printStackTrace();
+		//	}
+
+		//2-2:
+		//		try {
+		//			File file=new File("abcd.txt");
+		//			Scanner scan=new Scanner(file);
+		//		} catch (FileNotFoundException e) {
+		//			System.out.println("スタックトレースも出力する");
+		//			e.printStackTrace();
+		//		}
+
+		//2-3:
+		//					try {
+		//						String[] arrayb={"a","b","c"};
+		//						System.out.println(arrayb[3]);
+		//					} catch (ArrayIndexOutOfBoundsException e) {
+		//						System.out.println("スタックトレースも出力する");
+		//						e.printStackTrace();
+		//					}
+
+		//2-4:
+		//		try {
+		//			String s="abc";
+		//			for(int i=s.length();i>0;i--){
+		//				System.out.println(s.charAt(4));
+		//			}
+		//		} catch (StringIndexOutOfBoundsException  e) {
+		//			System.out.println("スタックトレースも出力する");
+		//			e.printStackTrace();
+		//		}
+
+		//2-5:
+		//		try {
+		//			String s="";
+		//			int i=Integer.parseInt(s);
+		//		} catch (NumberFormatException e) {
+		//			System.out.println("スタックトレースも出力する");
+		//			e.printStackTrace();
+		//		}
+
+		//3:
+		// メソッド呼び出し
+				System.out.println(charCompare("abc", "abc"));
+			}
+
+
+			public static boolean charCompare(String str1, String str2) {
+				// str1の1文字目を取得
+				String str1_1 = str1.substring(0, 1);
+
+				// str2の1文字目を取得
+				String str2_1 = str2.substring(0, 1);
+
+				if (str1_1.equals(str2_1)) {
+					return true;
+				}
+
+				return false;
+			}
+}
