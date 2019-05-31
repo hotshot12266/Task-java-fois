@@ -1,0 +1,43 @@
+package java3;
+
+import java.io.FileNotFoundException;
+
+public class java03 {
+public static void main(String[] args)throws FileNotFoundException  {
+	//1-1
+	//	try {
+	//		File file=new File("abc.txt");
+	//		if(!file.exists()){
+	//			file.createNewFile();
+	//		}
+	//		PrintWriter pw=new PrintWriter(file);
+	//		pw.println("1．NullPointerException");
+	//		pw.println("2．FileNotFoundException");
+	//		pw.println("3．ArrayIndexOutOfBoundsException");
+	//		pw.println("4．StringIndexOutOfBoundsException");
+	//		pw.println("5．NumberFormatException");
+	//		pw.close();
+	//		System.out.println("done");
+	//	} catch (IOException e) {
+	//		// TODO: handle exception
+	//		e.printStackTrace();
+	//	}
+	//
+
+	//2-1:
+	//	try {
+	//
+	//		// VD1: Lỗi NPE xảy ra nếu bạn cố truy nhập một null Object
+	//		Object object = null;
+	//		object.hashCode();
+	//	} catch (NullPointerException e) {
+	//		System.out.println("スタックトレースも出力する");
+	//		e.printStackTrace();
+	//	}
+
+	//2-2:
+	//	File file=new File("scores.dat");
+	//	System.out.println("スタックトレースも出力する");
+	//	Scanner scan=new Scanner(file);
+	}
+}

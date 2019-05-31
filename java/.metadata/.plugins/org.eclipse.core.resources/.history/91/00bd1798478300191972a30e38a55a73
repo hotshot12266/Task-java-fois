@@ -1,0 +1,220 @@
+package java1;
+
+import java.io.IOException;
+import java.util.Scanner;
+
+public class java01 {
+	public static int kadai1(){
+		Scanner inp = new Scanner(System.in);
+		System.out.print("文字を入力してください。");
+		String s = inp.nextLine();
+		System.out.printf("結果 :%s",s);
+		inp.close();
+		return 0;
+
+	}
+
+	public static void kadai2(){
+		Scanner inp = new Scanner(System.in);
+		System.out.print("一つ目の文字を入力してください。");
+		String ho = inp.nextLine();
+		System.out.print("二つ目の文字を入力してください。");
+		String lot = inp.nextLine();
+		System.out.print("三つ目の文字を入力してください。");
+		String ten = inp.nextLine();
+		System.out.printf("結果 :%s %s %s",ho,lot,ten);
+		inp.close();
+	}
+
+	public static void kadai3(){
+		Scanner inp = new Scanner(System.in);
+		System.out.print("整数を入力してください。 ");
+		int n = inp.nextInt();
+		System.out.print("結果: ");
+		for(int i=n;i<n+10;i++){
+			System.out.printf("%d ",i);
+		}
+	}
+	public static void main(String[] args) throws IOException {
+		//		kadai1();
+		//		kadai2();
+		//		kadai3()
+		//1-1：出力する結果
+		//		Scanner inp = new Scanner(System.in);
+		//		System.out.print("文字を入力してください。");
+		//		String s = inp.nextLine();
+		//		System.out.printf("結果 :%s",s);
+		//		inp.close();
+
+
+		//1-2：三回出力する結果
+		//		Scanner hoten = new Scanner(System.in);
+		//		System.out.print("一つ目の文字を入力してください。");
+		//		String ho = inp.nextLine();
+		//		System.out.print("二つ目の文字を入力してください。");
+		//		String lot = inp.nextLine();
+		//		System.out.print("三つ目の文字を入力してください。");
+		//		String ten = inp.nextLine();
+		//		System.out.printf("結果 :%s %s %s",ho,lot,ten);
+		//		inp.close();
+
+
+		//2-1：出力する番号の結果増加する
+		//		System.out.print("整数を入力してください。 ");
+		//		int n = inp.nextInt();
+		//		System.out.print("結果: ");
+		//		for(int i=n;i<n+10;i++){
+		//			System.out.printf("%d ",i);
+		//		}
+
+		//2-2：出力する番号の結果3つずつ増加
+		//				System.out.print("整数を入力してください。 ");
+		//				int n = inp.nextInt();
+		//				int dem=0;
+		//				System.out.printf("結果:");
+		//				while(dem<5){
+		//					System.out.printf("%d",n);
+		//					n+=3;
+		//					dem++;
+		//				}
+
+
+		//2-3：条件をチェックする
+		//		System.out.print("整数を入力してください。 ");
+		//		String n = inp.nextLine();
+		//
+		//		Pattern pattern = Pattern.compile("\\d*");
+		//		Matcher matcher = pattern.matcher(n);
+		//		int s;
+		//
+		//		System.out.print("結果: ");
+		//
+		//			 if (matcher.matches()) {
+		//				 s=Integer.parseInt(n);
+		//				 for(int i=s;i<s+10;i++){
+		//			System.out.printf("%d ",i);}
+		//			}else{
+		//
+		//		         System.out.println("入力された値は整数ではありません。");
+		//
+		//			}
+
+
+		//2-4：年の条件をチェックする
+		//		System.out.print("年(西暦)を入力してください。 ");
+		//		String n = inp.nextLine();
+		//		Pattern pattern = Pattern.compile("\\d*");
+		//		Matcher matcher = pattern.matcher(n);
+		//		int s;
+		//		System.out.print("結果: ");
+		//		if (matcher.matches()) {
+		//			s=Integer.parseInt(n);
+		//			if(s%400==0){
+		//				System.out.print("入力された値はうるう年です。 ");
+		//			}else{
+		//				if(s%4==0||s!=100){
+		//					System.out.print("入力された値はうるう年です。 ");
+		//				}else{
+		//					System.out.print("入力された値はうるう年ではありません。 ");
+		//				}
+		//			}
+		//		}else{
+		//			System.out.print("入力された値は整数ではありません。 ");
+		//
+		//		}
+
+
+
+		//2-5：番号を打つと字出力する
+		//				System.out.print("整数を入力してください。 ");
+		//				String n = inp.nextLine();
+		//				Pattern pattern = Pattern.compile("\\d*");
+		//				Matcher matcher = pattern.matcher(n);
+		//				System.out.print("結果: ");
+		//				int s;
+		//				if (matcher.matches()) {
+		//					s=Integer.parseInt(n);
+		//					switch (s) {
+		//					case 1:
+		//						 System.out.println("いち");
+		//						break;
+		//					case 2:
+		//						 System.out.println("に");
+		//						break;
+		//					case 3:
+		//						 System.out.println("さん");
+		//						break;
+		//					case 4:
+		//						 System.out.println("よん");
+		//						break;
+		//					default:
+		//						System.out.println("unknow");
+		//						break;
+		//					}
+		//				}else{
+		//					System.out.print("入力された値は整数ではありません。 ");
+		//				}
+
+
+		//3-1：割り算の数値
+		//								System.out.print("1つ目の数値を入力してください。");
+		//								String n=inp.nextLine();
+		//								System.out.print("2つ目の数値を入力してください。 ");
+		//								String m=inp.nextLine();
+		//								Pattern pattern = Pattern.compile("-?\\d+(\\.\\d+)?");
+		//								Matcher matcher = pattern.matcher(n);
+		//								Matcher matcher1 = pattern.matcher(m);
+		//								System.out.print("割り算: ");
+		//
+		//								if (matcher.matches()&&matcher1.matches()) {
+		//									Double s1,s2,s3;
+		//									s1=Double.parseDouble(n);
+		//									s2=Double.parseDouble(m);
+		//									s3=s1/s2;
+		//									System.out.printf("%.3f",s3);
+		//								}else{
+		//									System.out.print("入力された値が不正です。");
+		//								}
+
+
+		//3-2：足し算、引き算、掛け算、割り算の数値
+		//												int Scale=7;
+		//												System.out.print("1つ目の数値を入力してください。 ");
+		//												String n=inp.nextLine();
+		//												System.out.print("2つ目の数値を入力してください。");
+		//												String m=inp.nextLine();
+		//												Pattern pattern = Pattern.compile("-?\\d+(\\.\\d+)?");
+		//												Matcher matcher = pattern.matcher(n);
+		//												Matcher matcher1 = pattern.matcher(m);
+		//												System.out.print("結果:\n ");
+		//												Double s0,s00;
+		//												s0=Double.parseDouble(n);
+		//												s00=Double.parseDouble(m);
+		//												if(s00==0){
+		//													System.out.print("0除算は考慮しなくてもよい。");
+		//												}else{
+		//												if (matcher.matches()&&matcher1.matches()) {
+		//
+		//
+		//													BigDecimal s1,s2,s3,s4,s5,s6;
+		//													s1=new BigDecimal(s0);
+		//													s2=new BigDecimal(s00);
+		//
+		//													s3 = new BigDecimal(Double.toString(s0/s00));
+		//													s3=s3.setScale(Scale, BigDecimal.ROUND_HALF_EVEN);
+		//													s4= new BigDecimal(Double.toString(s0+s00));
+		//													s4=s4.setScale(Scale, BigDecimal.ROUND_HALF_EVEN);
+		//													s5=new BigDecimal(Double.toString(s0-s00));
+		//													s5=s5.setScale(Scale, BigDecimal.ROUND_HALF_EVEN);
+		//													s6=new BigDecimal(Double.toString(s0*s00));
+		//													s6=s6.setScale(Scale, BigDecimal.ROUND_HALF_EVEN);
+		//													System.out.print("足し算=" + s4.stripTrailingZeros().toPlainString());
+		//													System.out.print("\n 引き算=" + s5.stripTrailingZeros().toPlainString());
+		//													System.out.print("\n 掛け算=" + s6.stripTrailingZeros().toPlainString());
+		//													System.out.print("\n 割り算="+s3.stripTrailingZeros().toPlainString());
+		//												}else{
+		//													System.out.print("入力された値が不正です。");
+		//												}}
+
+	}
+}

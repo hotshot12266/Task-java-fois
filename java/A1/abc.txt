@@ -1,0 +1,5 @@
+1．NullPointerException:is a RuntimeException. In Java, a special null value can be assigned to an object reference. NullPointerException is thrown when program attempts to use an object reference that has the null value.
+2．FileNotFoundException
+3．ArrayIndexOutOfBoundsException
+4．StringIndexOutOfBoundsException
+5．NumberFormatException
