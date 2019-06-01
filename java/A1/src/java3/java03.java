@@ -9,7 +9,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class java03 {
-	//1-1
+	//1-1：エラーを説明する。
 	public static void kadai1(){
 		try {
 			File file=new File("abc.txt");
@@ -29,7 +29,7 @@ public class java03 {
 		}
 	}
 
-	//2-1:
+	//2-1:NullPointerExceptionのエラーを出力する。
 	public static void kadai2(){
 		try {
 			Object object = null;
@@ -40,7 +40,7 @@ public class java03 {
 		}
 	}
 
-	//2-2:
+	//2-2:FileNotFoundExceptionのエラーを出力する。
 	public static void kadai3(){
 		try {
 			File file=new File("abcd.txt");
@@ -51,7 +51,7 @@ public class java03 {
 		}
 	}
 
-	//2-3:
+	//2-3:ArrayIndexOutOfBoundsExceptionのエラーを出力する。
 	public static void kadai4(){
 		try {
 			String[] arrayb={"a","b","c"};
@@ -62,7 +62,7 @@ public class java03 {
 		}
 	}
 
-	//2-4:
+	//2-4:StringIndexOutOfBoundsExceptionのエラーを出力する。
 	public static void kadai5(){
 		try {
 			String s="abc";
@@ -75,7 +75,7 @@ public class java03 {
 		}
 	}
 
-	//2-5:
+	//2-5:NumberFormatExceptionのエラーを出力する。
 	public static void kadai6(){
 		try {
 			String s="";
@@ -87,7 +87,7 @@ public class java03 {
 
 	}
 
-	//3:
+	//3:エラーを直す。
 	public static void kadai7(){
 		System.out.println(charCompare("a", "a"));
 		System.out.println(charCompare("a", "b"));
@@ -117,7 +117,7 @@ public class java03 {
 		return false;
 	}
 
-	//4:
+	//4:番号を入力すると、その番号は10の番号を足す。0番号や番号ではないのを入力すると、0から以下の10を出力する。
 	public static void kadai8(){
 		String n;
 		int i,f,s1;
