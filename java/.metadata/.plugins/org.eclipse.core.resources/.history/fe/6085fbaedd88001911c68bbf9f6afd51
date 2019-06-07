@@ -1,0 +1,297 @@
+package java4;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Random;
+import java.util.Scanner;
+import java.util.StringTokenizer;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class java04 {
+	//1-1:テキストファイルを作成する
+	public static void kadai1(){
+		try {
+			File file=new File("input01.txt");
+			file.createNewFile();
+			System.out.println("done");
+		} catch (IOException e) {
+			System.out.println("ERROR");
+			e.printStackTrace();
+		}
+	}
+
+	//1-2:テキストファイルを作成したのはフォルダの中に置く。
+	public static void kadai2(){
+		File a = new File("input");
+		a.mkdir();
+		try {
+			File file=new File(a,"input01.txt");
+			file.createNewFile();
+			System.out.println("done");
+		} catch (Exception e) {
+			System.out.println("ERROR");
+			e.printStackTrace();
+		}
+
+	}
+
+	//1-3:テキストファイルを作成した結果を知らせる。
+	public static void kadai3(){
+		File a = new File("input");
+		a.mkdir();
+		try {
+			File file=new File(a,"input01.txt");
+			if(file.exists()){
+				System.out.println("ファイルが存在します。");
+			}else {
+				System.out.println("ファイルが存在しません。");
+				file.createNewFile();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	//1-4:テキストファイルを削除する。
+	public static void kadai4(){
+		Scanner sc=new Scanner(System.in);
+		System.out.println("1番号はテキストファイルを削除したいです。0番号はテキストファイルを削除しません。");
+		int s=sc.nextInt();
+		File file=new File("input01.txt");
+		if(file.exists()){
+			if(s==1){
+				file.delete();
+				System.out.println("テキストファイルを削除した。");
+			}else{
+				if(s==0){
+					System.out.println("テキストファイルを削除しない。");
+				}
+			}
+		}
+	}
+
+	//1-5:フォルダのテキストファイルを削除する。
+	public static void kadai5(){
+		Scanner sc=new Scanner(System.in);
+		System.out.println("1番号はテキストファイルを削除したいです。0番号はテキストファイルを削除しません。");
+		int s=sc.nextInt();
+		File a = new File("input");
+		File file=new File(a,"input01.txt");
+		if(file.exists()){
+			if(s==1){
+				file.delete();
+				System.out.println("テキストファイルを削除した。");
+			}else{
+				if(s==0){
+					System.out.println("テキストファイルを削除しない。");
+				}
+			}
+		}
+	}
+
+	//1-6の方法1:フォルダを削除する。
+	public static void kadai6(){
+		Scanner sc=new Scanner(System.in);
+		System.out.println("1番号はフォルダを削除したいです。0番号はフォルダを削除しません。");
+		int s=sc.nextInt();
+		File a = new File("input");
+		File file=new File(a,"input01.txt");
+		if(file.exists()){
+			if(s==1){
+				file.delete();
+				a.delete();
+				System.out.println("フォルダを削除した。");
+			}else{
+				if(s==0){
+					System.out.println("フォルダを削除しない。");
+				}
+			}
+		}
+	}
+
+	//	//1-6の方法2:フォルダを削除する。
+	//	public static void kadai7(){
+	//		Scanner sc=new Scanner(System.in);
+	//		System.out.println("1番号はフォルダを削除したいです。0番号はフォルダを削除しません。");
+	//		int s=sc.nextInt();
+	//		File a = new File("input");
+	//		File file=new File(a,"input01.txt");
+	//		if(a.exists()){
+	//			if(file.exists()){
+	//				file.delete();
+	//				if(s==1){
+	//					a.delete();
+	//					System.out.println("フォルダを削除した。");
+	//				}else{
+	//					if(s==0){
+	//						System.out.println("フォルダを削除しない。");
+	//					}
+	//				}
+	//			}
+	//		}
+	//	}
+
+	//2:
+	public static void kadai7() throws IOException{
+		try {
+			File file=new File("input02.txt");
+			if(!file.exists()){
+				file.createNewFile();
+			}
+			PrintWriter pw=new PrintWriter(file);
+			pw.println("1,2011/01/11,A");
+			pw.println("2,2012/01/12,B");
+			pw.println("3,2013/01/13,C");
+			pw.println("4,2014/01/14,D");
+			pw.println("5,2015/01/15,E");
+			pw.close();
+			System.out.println("done");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		FileReader fr = new FileReader("D:\\java\\A1\\input02.txt");
+		BufferedReader br = new BufferedReader(fr);
+
+		int i;
+		String t;
+		while (( t=br.readLine()) != null) {
+			System.out.print("\n"+ t.substring(2, 12));
+		}
+		br.close();
+		fr.close();
+	}
+
+	//3:
+	public static void kadai8() throws IOException{
+		FileWriter writer = new FileWriter("D:\\java\\A1\\input03.txt");
+		BufferedWriter buffer = new BufferedWriter(writer);
+		buffer.write("1,2011/01/11,A\n");
+		buffer.write("2,2012/01/12,B\n");
+		buffer.write("3,2013/01/13,C\n");
+		buffer.write("4,2014/01/14,D\n");
+		buffer.write("5,2015/01/15,E");
+		buffer.close();
+		System.out.println("Success...");
+	}
+
+	//4:
+	public static void kadai9() throws IOException{
+		BufferedWriter bw = null;
+		FileWriter fw = null;
+
+		try {
+			fw = new FileWriter("D:\\java\\A1\\input04.txt", true);
+			bw = new BufferedWriter(fw);
+			String content = "\nたちつてと";
+			bw.write(content);
+			System.out.println("Ghi them noi dung file xong!");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		finally {
+			try {
+
+				if (bw != null)
+					bw.close();
+
+				if (fw != null)
+					fw.close();
+
+			} catch (IOException ex) {
+
+				ex.printStackTrace();
+
+			}
+			System.out.println("Success...");}
+	}
+
+	//5:
+	public static void kadai10() throws IOException{
+		try {
+			File file=new File("PropA.properties.txt");
+			//			File file1=new File("PropB.properties.txt");
+			if(!file.exists()){
+				file.createNewFile();
+				//				file1.createNewFile();
+			}
+			//			PrintWriter pw1 = new PrintWriter(file1);
+			Scanner inp = new Scanner(System.in);
+			System.out.println("nhap so luong:");
+			Random rd = new Random();
+			int n=inp.nextInt();
+			PrintWriter pw = new PrintWriter(file);
+			for(int i=1;i<=n;i++){
+				int number = 1000+rd.nextInt(9999);
+				pw.println("key "+i+"= "+number);
+				//				if(file1.exists()){
+				//					String c1=inp.nextLine();
+				//					System.out.println("nhap ten:");
+				//					pw1.println(number+"="+c1);
+				//				}
+			}
+			pw.close();
+			//			pw1.close();
+			System.out.println("done");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void kadai11() throws IOException{
+		try {
+			File file=new File("PropA.properties.txt");
+			File file1=new File("PropB.properties.txt");
+			if(file.exists()){
+				file1.createNewFile();
+			}
+			FileReader fr = new FileReader("D:\\java\\A1\\PropA.properties.txt");
+			BufferedReader br = new BufferedReader(fr);
+			int i;
+			String t;
+			PrintWriter pw1 = new PrintWriter(file1);
+			while (( t=br.readLine()) != null) {
+				StringTokenizer str = new StringTokenizer(t," ");
+				while (str.hasMoreTokens()) {
+					String key = str.nextToken();
+					Pattern pattern = Pattern.compile("\\d*");
+					Matcher matcher = pattern.matcher(key);
+					if (matcher.matches()) {
+						int s=Integer.valueOf(key);
+						pw1.println(s);
+						//							System.out.println(s);
+
+					}
+				}
+
+			}
+			br.close();
+			fr.close();
+			pw1.close();
+			System.out.println("done");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+
+	public static void main(String[] args) throws IOException {
+		//kadai1();
+		//kadai2();
+		//kadai3();
+		//kadai4();
+		//kadai5();
+		//kadai6();
+		//kadai7();
+		//kadai8();
+		//kadai9();
+		//kadai10();
+		kadai11();
+	}
+}

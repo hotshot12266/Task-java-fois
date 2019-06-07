@@ -1,0 +1,80 @@
+package java5;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class java05 {
+	//1:
+	public static void kadai1(){
+		try {
+			File file=new File("Framework.txt");
+			if(!file.exists()){
+				file.createNewFile();
+			}
+			PrintWriter pw=new PrintWriter(file);
+			pw.println("1．Listはjavaのインタフェースです。インデックスに基づいて要素を挿入および削除するためのメソッドが含まれています。\n");
+			pw.println("参考にしたWebサイトは：https://viettuts.vn/java-collection/list-trong-java\n");
+			pw.println("2．javaのMAPには一意のキー値のみが含まれています。MAPは、キーに基づいて上記の要素を検索、更新、または削除する必要がある場合に便利です。\n");
+			pw.println("参考にしたWebサイトは：https://viettuts.vn/java-collection/map-trong-java\n");
+			pw.println("3．SETに重複する要素は含まれません。\n");
+			pw.println("参考にしたWebサイトは：http://that2u.com/java-java-collection-framework-phan-3-set-interface/\n");
+			pw.println("4．LISTとSETの違いは、LISTに重複する要素を含めることができ、SETには一意の要素のみが含まれることです。\n");
+			pw.println("参考にしたWebサイトは：https://viettuts.vn/interview/list-cau-hoi-phong-van-java-collection\n");
+			pw.println("5．SETとMAPの違いは、SETには値のみが含まれ、MAPにはキーと値のペアが含まれています。\n");
+			pw.println("参考にしたWebサイトは：https://viettuts.vn/interview/list-cau-hoi-phong-van-java-collection\n");
+			pw.close();
+			System.out.println("done");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	//2:
+	public static void kadai2(){
+		System.out.print("格納する数値:\n");
+		int sum=0,sum1=0;
+		for(int i=1;i<=10;i++){
+			ArrayList<Integer> s1 = new ArrayList<>();
+			s1.add(i);
+			Iterator itr = s1.iterator();
+			Object num = itr.next();
+			System.out.print(num+" ");
+			for (int element : s1) {
+		        sum += element;
+		    }
+		}
+		for(int j=10;j>=1;j--){
+			ArrayList<Integer> s2 = new ArrayList<>();
+			s2.add(j);
+			Iterator itr1 = s2.iterator();
+			Object num1 = itr1.next();
+			System.out.print(num1+" ");
+			for (int element1 : s2) {
+		        sum1 += element1;
+		    }
+
+		}
+		int tong=sum+sum1;
+		System.out.print("\n合計："+tong);
+
+//        System.out.println("--------------------------");
+//        for(int k=1;k<=10;k++){
+//        	for(int  p=10;p>=1;p--){
+//        Map<Integer, Integer> s2 = new HashMap<Integer, Integer>();
+//        s2.put(k, p);
+//        Set<Integer> keySet = s2.keySet();
+//        List<Integer> listOfKeys = new ArrayList<Integer>(keySet);
+//        System.out.println("ArrayList Of Keys :");
+//        for ( int key : listOfKeys) {
+//        	System.out.println(key);
+//        }
+//        }}
+	}
+	public static void main(String[] args) {
+		//kadai1();
+		kadai2();
+	}
+}
